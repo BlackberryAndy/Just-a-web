@@ -498,3 +498,87 @@ footer {
     aspect-ratio: 16 / 9;
   }
 }
+
+/* ==========================================
+   6. BỔ SUNG: CSS CHO NÚT LINK TRUYỆN & ĐĨA THAN XOAY
+   ========================================== */
+
+/* Hiệu ứng xoay đĩa than khi phát nhạc */
+@keyframes spinVinyl {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vinyl-spinning {
+  animation: spinVinyl 5s linear infinite;
+}
+
+/* Nút liên kết trang truyện ngoài trong từng Playlist Item */
+.story-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  padding: 2px 6px;
+  background-color: var(--olive);
+  color: #f4f1ea !important;
+  font-size: 11px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px var(--shadow);
+}
+
+.story-link-btn:hover {
+  background-color: var(--primary);
+  transform: scale(1.1);
+  color: #fff !important;
+}
+
+/* Nút Xóa bài hát trong Playlist Item */
+.delete-item-btn {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: var(--brown);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+.delete-item-btn:hover {
+  opacity: 1;
+  color: #a72626;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Trạng thái bài đang phát (Active) trong danh sách Playlist */
+.playlist-item.active {
+  background-color: #c0bb30;
+  border-left: 5px solid var(--olive);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tùy chỉnh ngôi sao đánh giá khi Hover / Active */
+.stars .star {
+  transition: color 0.2s ease, transform 0.1s ease;
+  display: inline-block;
+  color: #8c7662; /* Màu mặc định khi chưa chọn */
+}
+
+.stars .star.hover,
+.stars .star.active {
+  color: #fbc02d; /* Màu vàng khi được chọn/hover */
+}
+
+.stars .star.hover {
+  transform: scale(1.2);
+}
