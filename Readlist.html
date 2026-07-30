@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vintage Journal & Music Player</title>
+  
+  <!-- File CSS riêng -->
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+  <!-- Search Header -->
+  <header>
+    <!-- Search -->
+    <div class="search-container">
+      <div class="search-icon">🔍</div>
+      <input type="text" class="search-input" id="search-input" placeholder="Thanh tìm kiếm tên truyện trong bộ sưu tập...">
+      <button class="clear-btn" id="clear-btn" aria-label="Clear search">✕</button>
+    </div>
+  </header>
+
+  <!-- Main Grid Content -->
+  <main>
+
+    <!-- Cột Trái: Music Panel -->
+    <aside class="left-panel">
+      <!-- Music Player -->
+      <div class="music-player">
+        <!-- Vinyl Record -->
+        <div class="vinyl-wrapper">
+          <div class="rotating-ring"></div>
+          <div class="vinyl-record" id="vinyl-record">
+            <div class="cover-image" id="vinyl-cover">
+              Cover
+            </div>
+          </div>
+        </div>
+
+        <!-- Music Controls -->
+        <div class="music-controls">
+          <button class="control-btn" id="pause-btn" title="Pause">❚❚</button>
+          <button class="control-btn" id="play-btn" title="Play">▶</button>
+        </div>
+
+        <!-- Song Info Placeholder -->
+        <div class="song-info">
+          <div class="song-title" id="song-title">Song Title</div>
+          <div class="song-artist" id="song-artist">Artist Name</div>
+        </div>
+
+        <!-- Progress Bar Placeholder -->
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="time-info">
+            <span class="current-time" id="current-time">00:00</span>
+            <span class="duration" id="duration">00:00</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Cột Giữa: Content Reader Panel -->
+    <section class="content-panel">
+      <!-- Reader -->
+      <article class="reader-container" id="reader-container">
+        <div class="reader-placeholder-text">
+          Content Preview<br><br>
+          Tự do paste hoặc input hình<br>
+          or<br>
+          Render HTML Here
+        </div>
+      </article>
+    </section>
+
+    <!-- Cột Phải: Playlist Panel -->
+    <aside class="playlist-panel">
+
+      <!-- User Profile Header -->
+      <div class="user-profile">
+        <div class="user-info">
+          <div class="username">PARK JONGSEONG</div>
+          <div class="caption">APRIL 20, 2002</div>
+        </div>
+        <div class="profile-avatar-container">
+          <div class="avatar-placeholder" id="user-avatar">Avatar</div>
+          <button class="add-user-btn" id="add-user-btn">+</button>
+        </div>
+      </div>
+
+      <!-- Playlist Title -->
+      <h2 class="playlist-title">PLAYLIST!</h2>
+
+      <!-- Playlist Items -->
+      <ul class="playlist-list" id="playlist-list">
+        <!-- Các mục playlist sẽ được JS render tự động tại đây -->
+      </ul>
+
+      <!-- Add New Playlist Item -->
+      <div class="add-playlist-item" id="add-playlist-btn">
+        <span class="add-icon">+</span>
+        <div class="add-text-container">
+          <span class="add-title">Add New Playlist</span>
+          <span class="add-subtext">Tùy ý thêm link truyện / tên truyện / tác giả</span>
+        </div>
+      </div>
+
+      <!-- Rating -->
+      <div class="rating-container" id="rating-container">
+        <div class="stars" id="star-rating">
+          <span class="star" data-value="1">★</span>
+          <span class="star" data-value="2">★</span>
+          <span class="star" data-value="3">★</span>
+          <span class="star" data-value="4">★</span>
+          <span class="star" data-value="5">★</span>
+        </div>
+        <div class="rating-text" id="rating-text">Đánh giá trải nghiệm bằng sao</div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <a href="Index.html" class="footer-home-btn" id="home-btn">Home</a>
+  </footer>
+
+  <!-- File JavaScript -->
+  <script src="script3.js"></script>
+</body>
+</html>

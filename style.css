@@ -1,0 +1,477 @@
+/* ==========================================
+   RESET & SYSTEM VARIABLES (Tone Vàng - Trắng)
+   ========================================== */
+:root {
+  --bg-page: url("https://i.pinimg.com/1200x/af/6b/8a/af6b8afd985e3afee84c5190ab9a0707.jpg");       /* Màu nền trang ngoài cùng */
+  --bg-card: #000000CC; /* khoảng 60% */
+  --primary-yellow: #e6a100;  /* Màu vàng chủ đạo */
+  --secondary-yellow: #fce282;/* Vàng nhạt / Highlight */
+  --accent-yellow: #d18f00;   /* Vàng đậm cho Hover */
+  --text-dark: #2c2925;      /* Màu chữ tối */
+  --text-light: #ffffff;     /* Màu chữ sáng */
+  --text-muted: #8c8273;     /* Màu chữ phụ */
+  --border-light: #f0e6d2;   /* Đường phân cách */
+  
+  --radius-outer: 32px;
+  --radius-inner: 24px;
+
+  /* Hệ thống bóng đổ (Shadow System) */
+  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 12px 30px rgba(44, 41, 37, 0.12);
+  --shadow-hover: 0 18px 36px rgba(0, 0, 0, 0.18);
+  --shadow-img: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: var(--bg-page);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ==========================================
+   LAYOUT CONTAINER
+   ========================================== */
+.site-container {
+  width: 100%;
+  max-width: 980px;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-outer);
+  padding: 28px;
+  /* Bóng đổ lớn cho toàn bộ Container chính */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+/* ==========================================
+   TOP HERO CARD (Khối màu vàng phía trên)
+   Sử dụng clip-path để tạo hình notch/chữ L
+   ========================================== */
+.top-hero-card {
+  background-color: var(--primary-yellow);
+  background-image: linear-gradient(rgba(230, 161, 0, 0.45), rgba(230, 161, 0, 0.45)), 
+                    url('https://i.pinimg.com/1200x/af/6b/8a/af6b8afd985e3afee84c5190ab9a0707.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-inner);
+  height: 380px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  
+  /* Đổ bóng cho Hero Card */
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.15));
+
+  /* Đường khoét góc trái dưới */
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% 100%, 
+    32% 100%, 
+    32% 82%, 
+    0 82%
+  );
+}
+
+/* Header & Navigation */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-box {
+  background: var(--bg-card);
+  padding: 6px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-placeholder {
+  width: 32px;
+  height: 32px;
+  background: var(--primary-yellow);
+  border-radius: 50%;
+}
+
+.nav-links {
+  background: var(--bg-card);
+  padding: 6px 10px;
+  border-radius: 30px;
+  display: flex;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 6px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-btn.active, .nav-btn:hover {
+  background-color: #f7bb25;
+  color: var(--text-light);
+  box-shadow: 0 3px 8px rgba(230, 161, 0, 0.4);
+}
+
+.contact-info {
+  text-align: right;
+  color: var(--text-light);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.phone-number {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.phone-sub {
+  font-size: 10px;
+  opacity: 0.9;
+}
+
+/* Hero Content (Tiêu đề lớn góc phải) */
+.hero-content {
+  text-align: right;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ==========================================
+   MAIN CONTENT GRID
+   ========================================== */
+.main-content {
+  display: grid;
+  grid-template-columns: 32% 64%;
+  gap: 4%;
+  margin-top: -55px; /* Ghép khớp vào góc khuyết của top-hero-card */
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  color: var(--primary-yellow);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Cột Trái */
+.left-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.description-text {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Tối ưu khung ảnh lớn để trang không bị rỗng */
+.image-box-large {
+  width: 100%;
+  height: 580px; /* Tăng chiều cao để không không bị trống không gian */
+  background-image: url("https://i.pinimg.com/1200x/6e/5f/a5/6e5fa5c0710c15d75cbdd2199a5050d2.jpg");
+  background-size: cover;       /* Ảnh phủ kín khung */
+    background-position: center;  /* Căn giữa */
+    background-repeat: no-repeat;
+  border-radius: var(--radius-inner);
+  border: 7px dashed var(--secondary-yellow);
+  /* Bóng đổ cho ảnh lớn */
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box-large:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Cột Phải */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 75px; /* Đẩy nội dung xuống khớp góc cắt */
+}
+
+/* ==========================================
+   MUSIC PLAYER CARD
+   ========================================== */
+.music-player-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #ffffff;
+  border: 2px solid #2c2925;
+  border-radius: 24px;
+  padding: 20px;
+  width: 100%;
+  margin: 10px 0 20px 0;
+  /* Bóng đổ hiệu ứng nổi cho player */
+  box-shadow: var(--shadow-medium);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-player-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.player-cover {
+  width: 130px;
+  height: 130px;
+  min-width: 130px;
+  border: 3px solid #2c2925;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f0f0f0;
+  /* Bóng đổ nhẹ cho ảnh bìa nhạc */
+  box-shadow: var(--shadow-img);
+}
+
+.player-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.song-info h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c2925;
+  margin-bottom: 2px;
+}
+
+.song-info p {
+  font-size: 12px;
+  color: #777;
+}
+
+.btn-like {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.2s;
+}
+
+.btn-like.liked {
+  color: #e74c3c;
+}
+
+/* Ô nhập Link YouTube */
+.youtube-input-group {
+  display: flex;
+  gap: 6px;
+}
+
+.youtube-input-group input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 6px 10px;
+  font-size: 11px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.youtube-input-group input:focus {
+  border-color: var(--primary-yellow);
+}
+
+.youtube-input-group button {
+  background: #2c2925;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.youtube-input-group button:hover {
+  background: var(--accent-yellow);
+  transform: translateY(-1px);
+}
+
+/* Thanh Tiến Trình */
+.progress-bar-container {
+  width: 100%;
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: #2c2925;
+  transition: width 0.3s ease;
+}
+
+/* Nút Điều Khiển */
+.player-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.ctrl-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #2c2925;
+  transition: transform 0.2s ease;
+}
+
+.ctrl-btn:hover {
+  transform: scale(1.2);
+}
+
+.play-main-btn {
+  background: #2c2925;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ==========================================
+   KHỐI CONTACTS / NEWS
+   ========================================== */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--border-light);
+  /* Bóng nhẹ cho từng mục danh bạ */
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.news-item:hover {
+  transform: translateX(4px);
+  background-color: #ffffff;
+  box-shadow: var(--shadow-medium);
+}
+
+/* Tối ưu hiển thị ảnh trong thumb-box */
+.thumb-box {
+  width: 55px;
+  height: 55px;
+  min-width: 55px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  /* Bóng đổ riêng cho các icon/avatar nhỏ */
+  box-shadow: var(--shadow-img);
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Định dạng các đường link */
+.thumb-link {
+  display: block;
+  text-decoration: none;
+}
+
+.contact-link {
+  color: var(--primary-yellow);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--accent-yellow);
+  text-decoration: underline;
+}
+
+.news-text p {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}

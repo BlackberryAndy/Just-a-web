@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Daily Planner</title>
+  <link rel="stylesheet" href="style2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="planner-container">
+    
+    <header class="planner-header">
+      <div class="header-left">
+        <div class="title-with-home">
+          <a href="Index.html" class="btn-home" title="Trang chủ">🏠</a>
+          <h1 class="planner-title">Daily Planner</h1>
+        </div>
+        <div class="date-picker">
+          <label>Date :</label>
+          <input type="date" id="planner-date" class="save-input">
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="days-tracker">
+          <span class="day-dot" data-day="Mo">Mo</span>
+          <span class="day-dot" data-day="Tu">Tu</span>
+          <span class="day-dot" data-day="We">We</span>
+          <span class="day-dot" data-day="Th">Th</span>
+          <span class="day-dot" data-day="Fr">Fr</span>
+          <span class="day-dot" data-day="Sa">Sa</span>
+          <span class="day-dot" data-day="Su">Su</span>
+        </div>
+        <div class="mood-header">
+          <span class="header-emoji" data-mood="1">😃</span>
+          <span class="header-emoji" data-mood="2">🙂</span>
+          <span class="header-emoji" data-mood="3">😐</span>
+          <span class="header-emoji" data-mood="4">😨</span>
+          <span class="header-emoji" data-mood="5">😫</span>
+          <span class="header-emoji" data-mood="6">😡</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="planner-grid">
+
+      <div class="grid-column col-left">
+        
+        <section class="card section-schedule">
+          <div class="card-header dark">Today's schedule</div>
+          <div class="schedule-list">
+            <div class="time-slot"><input type="text" class="time-input save-input" placeholder="08:00"><span class="to-text">to</span><input type="text" class="time-end save-input" placeholder="09:00"><input type="text" class="task-input save-input"></div>
+            <div class="time-slot"><input type="text" class="time-input save-input"><span class="to-text">to</span><input type="text" class="time-end save-input"><input type="text" class="task-input save-input"></div>
+            <div class="time-slot"><input type="text" class="time-input save-input"><span class="to-text">to</span><input type="text" class="time-end save-input"><input type="text" class="task-input save-input"></div>
+            <div class="time-slot"><input type="text" class="time-input save-input"><span class="to-text">to</span><input type="text" class="time-end save-input"><input type="text" class="task-input save-input"></div>
+            <div class="time-slot"><input type="text" class="time-input save-input"><span class="to-text">to</span><input type="text" class="time-end save-input"><input type="text" class="task-input save-input"></div>
+            <div class="time-slot"><input type="text" class="time-input save-input"><span class="to-text">to</span><input type="text" class="time-end save-input"><input type="text" class="task-input save-input"></div>
+            <div class="time-slot"><input type="text" class="time-input save-input"><span class="to-text">to</span><input type="text" class="time-end save-input"><input type="text" class="task-input save-input"></div>
+            <div class="time-slot"><input type="text" class="time-input save-input"><span class="to-text">to</span><input type="text" class="time-end save-input"><input type="text" class="task-input save-input"></div>
+            <div class="time-slot"><input type="text" class="time-input save-input"><span class="to-text">to</span><input type="text" class="time-end save-input"><input type="text" class="task-input save-input"></div>
+            <div class="time-slot"><input type="text" class="time-input save-input"><span class="to-text">to</span><input type="text" class="time-end save-input"><input type="text" class="task-input save-input"></div>
+          </div>
+        </section>
+
+        <section class="card section-todo">
+          <div class="card-header dark">To-do list</div>
+          <div class="todo-columns">
+            <div class="todo-subcol">
+              <div class="sub-header">More important</div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            </div>
+            <div class="todo-subcol">
+              <div class="sub-header">Less important</div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+              <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="bottom-left-grid">
+          <section class="card section-meals">
+            <div class="card-header medium">Meals</div>
+            <div class="meal-row"><label>Breakfast :</label><input type="text" class="save-input"></div>
+            <div class="meal-row"><label>Lunch :</label><input type="text" class="save-input"></div>
+            <div class="meal-row"><label>Dinner :</label><input type="text" class="save-input"></div>
+            <div class="meal-row"><label>Snacks :</label><input type="text" class="save-input"></div>
+          </section>
+
+          <section class="card section-notes">
+            <div class="card-header dark vertical-title">Notes :</div>
+            <textarea class="notes-area save-input" placeholder="Write notes..."></textarea>
+          </section>
+
+          <section class="card section-tomorrow">
+            <div class="card-header dark">For tomorrow</div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+          </section>
+        </div>
+
+        <div class="footer-left-group">
+          <div class="rate-box">
+            <div class="mood-mini">
+              <span class="mini-emoji">😃</span>
+              <span class="mini-emoji">🙂</span>
+              <span class="mini-emoji">😐</span>
+              <span class="mini-emoji">😨</span>
+              <span class="mini-emoji">😫</span>
+              <span class="mini-emoji">😡</span>
+            </div>
+            <div class="rate-badge">Rate: <input type="text" class="rate-input save-input" placeholder="8/10"></div>
+          </div>
+
+          <section class="card section-grateful">
+            <div class="card-header medium">Today I am grateful for</div>
+            <textarea class="mini-area save-input"></textarea>
+          </section>
+        </div>
+
+      </div>
+
+      <div class="grid-column col-right">
+
+        <section class="section-checkup">
+          <div class="checkup-title">Morning checkup</div>
+          <div class="line-field"><label>Energy level :</label><input type="text" class="save-input"></div>
+          <div class="line-field"><label>Hours sleep :</label><input type="text" class="save-input"></div>
+          <div class="line-field"><label>Quality of sleeping :</label><input type="text" class="save-input"></div>
+          <div class="line-field"><label>Hunger level :</label><input type="text" class="save-input"></div>
+        </section>
+
+        <section class="card section-urgent">
+          <div class="card-header dark">Urgent / Remember</div>
+          <textarea class="card-area save-input"></textarea>
+        </section>
+
+        <section class="card section-hope">
+          <div class="card-header light">Today I hope for</div>
+          <textarea class="card-area save-input"></textarea>
+        </section>
+
+        <section class="card section-routine">
+          <div class="card-header dark">Routine</div>
+          <div class="routine-list">
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+            <div class="todo-item"><input type="checkbox" class="save-chk"><input type="text" class="save-input"></div>
+          </div>
+        </section>
+
+        <section class="card section-goals">
+          <div class="card-header light">Today's goals</div>
+          <div class="goals-list">
+            <div class="goal-item"><span>1.</span><input type="text" class="save-input"></div>
+            <div class="goal-item"><span>2.</span><input type="text" class="save-input"></div>
+            <div class="goal-item"><span>3.</span><input type="text" class="save-input"></div>
+            <div class="goal-item"><span>4.</span><input type="text" class="save-input"></div>
+            <div class="goal-item"><span>5.</span><input type="text" class="save-input"></div>
+          </div>
+        </section>
+
+        <section class="card section-health">
+          <div class="card-header dark">Health</div>
+          <div class="health-grid">
+            <div class="health-row">
+              <div><label>Steps :</label><input type="text" class="short-input save-input"></div>
+              <div><label>Kilomètres :</label><input type="text" class="short-input save-input"></div>
+            </div>
+            <div class="health-row">
+              <div><label>Exercise :</label><input type="text" class="short-input save-input"></div>
+              <div><label>Times :</label><input type="text" class="short-input save-input"></div>
+            </div>
+            <div class="water-tracker">
+              <label>Water intake :</label>
+              <div class="glasses-container">
+                <span class="glass-icon">🥛</span>
+                <span class="glass-icon">🥛</span>
+                <span class="glass-icon">🥛</span>
+                <span class="glass-icon">🥛</span>
+                <span class="glass-icon">🥛</span>
+                <span class="glass-icon">🥛</span>
+                <span class="glass-icon">🥛</span>
+                <span class="glass-icon">🥛</span>
+              </div>
+            </div>
+            <div class="pills-tracker">
+              <label>Vitamins : <input type="checkbox" class="save-chk"></label>
+              <label>Pill : <input type="checkbox" class="save-chk"></label>
+            </div>
+          </div>
+
+          <div class="image-upload-wrapper">
+            <label for="img-input" class="upload-label">🖼️ Tải ảnh trang trí / ghi chú</label>
+            <input type="file" id="img-input" accept="image/*" style="display: none;">
+            <div id="image-preview" class="image-preview"></div>
+          </div>
+        </section>
+
+        <section class="card section-proud">
+          <div class="card-header dark">I'm proud of myself for</div>
+          <textarea class="card-area save-input"></textarea>
+        </section>
+
+      </div>
+
+    </main>
+
+    <div class="action-bar">
+      <button onclick="window.print()" class="btn btn-print">🖨️ In / Xuất PDF</button>
+      <button onclick="clearPlanner()" class="btn btn-clear">🗑️ Xóa làm lại</button>
+    </div>
+
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
