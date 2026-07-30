@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morris Ventris Sandersson</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+
+  <div class="site-container">
+
+    <header class="top-hero-card">
+      <nav class="navbar">
+        <div class="logo-box">
+          <div class="logo-placeholder"></div>
+        </div>
+        <div class="nav-links">
+          <a href="#" class="nav-btn active">HOME</a>
+          <a href="Celander.html" class="nav-btn">CALENDAR</a>
+          <a href="Readlist.html" class="nav-btn">PLAYLIST</a>
+        </div>
+        <div class="contact-info">
+          <span class="phone-number">+846654546</span>
+          <span class="phone-sub">Ông Kẹ VN</span>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="hero-subtitle">Son of Dorn</div>
+        <h1 class="hero-title">MORRIS .V<br> SANDERSSON</h1>
+      </div>
+    </header>
+
+    <main class="main-content">
+      
+      <section class="left-column">
+        <h2 class="section-title">THIS MONTH STAR</h2>
+        <p class="description-text">
+          Hastur Sejanus was the Captain of the 4th Company of the Luna Wolves Space Marine Legion and a member of the Mournival.
+        </p>
+        <div class="image-box-large">
+          <div class="star-img"></div>
+        </div>
+      </section>
+
+      <section class="right-column">
+        
+        <div class="specialty-block">
+          <h2 class="section-title">FAVOURITE SONG</h2>
+          <div class="music-player-card">
+            <div class="player-cover">
+              <img id="song-cover" src="https://via.placeholder.com/150?text=Music" alt="Cover Art">
+            </div>
+
+            <div class="player-content">
+              <div class="player-header">
+                <div class="song-info">
+                  <h3 id="song-title">Song title</h3>
+                  <p id="song-artist">Paste YouTube link below</p>
+                </div>
+                <button class="btn-like" id="like-btn">♥</button>
+              </div>
+
+              <div class="youtube-input-group">
+                <input type="text" id="yt-url-input" placeholder="Dán link YouTube vào đây...">
+                <button id="load-yt-btn">Phát nhạc</button>
+              </div>
+
+              <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+              </div>
+
+              <div class="player-controls">
+                <button class="ctrl-btn">🔀</button>
+                <button class="ctrl-btn" id="prev-btn">⏮</button>
+                <button class="ctrl-btn play-main-btn" id="play-pause-btn">▶</button>
+                <button class="ctrl-btn" id="next-btn">⏭</button>
+                <button class="ctrl-btn">🔁</button>
+              </div>
+
+              <div id="yt-player-container" style="display:none;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="news-block">
+          <h2 class="section-title">MY CONTACTS</h2>
+
+          <div class="news-list">
+            <div class="news-item">
+              <a href="https://www.facebook.com/jager.von.sterben" target="_blank" class="thumb-link">
+                <div class="thumb-box">
+                  <img src="https://i.pinimg.com/236x/1d/36/d2/1d36d2b47b0942a00c9ad1c40461d12a.jpg" alt="Facebook Icon" class="thumb-img">
+                </div>
+              </a>
+              <div class="news-text">
+                <p>
+                  <a href="https://www.facebook.com/jager.von.sterben" target="_blank" class="contact-link">Kết bạn qua Facebook</a> 
+                  thì chịu khó nhe, tui bị Messphobia :>>>>.
+                </p>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <a href="https://www.tumblr.com/blog/notsurewhattocall" target="_blank" class="thumb-link">
+                <div class="thumb-box">
+                  <img src="https://i.pinimg.com/236x/40/56/7e/40567ea897f6cc804bea35c90d74b845.jpg" alt="Tumblr Icon" class="thumb-img">
+                </div>
+              </a>
+              <div class="news-text">
+                <p>
+                  Một trong 3 acc <a href="https://www.tumblr.com/blog/notsurewhattocall" target="_blank" class="contact-link">Tumblr</a> của tui, các bạn giả mù trước cái bio dùm, hehe =////=.
+                </p>
+              </div>
+            </div>
+
+            <div class="news-item">
+              <a href="https://archiveofourown.org/users/MorrisMauseAndersson" target="_blank" class="thumb-link">
+                <div class="thumb-box">
+                  <img src="https://i.pinimg.com/1200x/1e/6d/fd/1e6dfd73165b611307ed48c3a719d7e1.jpg" alt="AO3 Icon" class="thumb-img">
+                </div>
+              </a>
+              <div class="news-text">
+                <p>
+                  Ít khi xài, cân nhắc trc khi add nhó, tui follow đủ fandom hết á, bik đâu bạn có thể quen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
